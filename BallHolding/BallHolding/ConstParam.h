@@ -15,3 +15,6 @@ extern gl_color backGroundColor;
 extern gl_color barColor;
 extern gl_color cursorColor;
 extern gl_color ballColor;
+
+extern double screenScaleHeight;
+extern double screenScaleWidth;
