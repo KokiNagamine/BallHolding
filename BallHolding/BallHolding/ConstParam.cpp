@@ -2,19 +2,19 @@
 
 //色宣言{red, green, blue, alpha}
 gl_color backGroundColor = {
-	1.0f, 0.0f, 1.0f, 1.0f
+	0.0f, 0.5f, 0.0f, 1.0f
 };
 
 gl_color barColor = {
-	1.0f, 1.0f, 1.0f, 1.0f
+	0.0f, 0.5f, 1.0f, 1.0f
 };
 
 gl_color cursorColor = {
-	1.0f, 1.0f, 1.0f, 1.0f
+	0.0f, 0.0f, 0.0f, 1.0f
 };
 
 gl_color ballColor = {
-	1.0f, 1.0f, 1.0f, 1.0
+	0.7f, 0.0f, 0.0f, 1.0f
 };
 
 //スクリーンと実尺の比率、ピクセルを実寸で割った値

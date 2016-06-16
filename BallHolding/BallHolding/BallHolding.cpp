@@ -2,7 +2,9 @@
 //
 
 #include "stdafx.h"
+#include "BarShape.h"
 #include "BallShape.h"
+#include "CursorShape.h"
 
 #include <GL/glut.h>
 
@@ -10,7 +12,11 @@
 #define HEIGHT 768
 
 bool full_screen_flag = false;
-BallShape ball = BallShape(0.0, 0.0, 2.0, ballColor);
+
+BarShape test = BarShape(1.0, 2.0, barColor);
+BallShape ball = BallShape(0.0, 2.0, 3.0, ballColor);
+CursorShape cursor = CursorShape(0.0, 3.0, 1.5, 8.0, cursorColor);
+
 
 
 //コールバック関数
@@ -18,8 +24,9 @@ void diplay(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	//ballShape ball = ballShape(0.0, 0.0, 3.0, ballColor);
+	test.drawn();
 	ball.drawn();
+	cursor.drawn();
 
 	glutSwapBuffers();
 }

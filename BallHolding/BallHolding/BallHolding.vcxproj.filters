@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\GLmodule">
+      <UniqueIdentifier>{e7bc183f-ce17-4f43-972a-2254d12a25ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\GLmodule">
+      <UniqueIdentifier>{b1f29658-2f3c-462d-bd6c-ff174aad6c25}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -27,11 +33,17 @@
     <ClInclude Include="ConstParam.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Shape.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="BallShape.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\GLmodule</Filter>
+    </ClInclude>
+    <ClInclude Include="BarShape.h">
+      <Filter>ヘッダー ファイル\GLmodule</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorShape.h">
+      <Filter>ヘッダー ファイル\GLmodule</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>ヘッダー ファイル\GLmodule</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -45,10 +57,16 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Shape.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\GLmodule</Filter>
+    </ClCompile>
+    <ClCompile Include="CursorShape.cpp">
+      <Filter>ソース ファイル\GLmodule</Filter>
+    </ClCompile>
+    <ClCompile Include="BarShape.cpp">
+      <Filter>ソース ファイル\GLmodule</Filter>
     </ClCompile>
     <ClCompile Include="BallShape.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\GLmodule</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

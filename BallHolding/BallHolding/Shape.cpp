@@ -9,8 +9,8 @@ Shape::Shape()
 
 void Shape::updatePosition(double x, double y)
 {
-	height = x;
-	width = y;
+	xCoordinate = x;
+	yCoordinate = y;
 }
 
 void Shape::updateColor(gl_color c)

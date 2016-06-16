@@ -16,8 +16,8 @@ public:
 	void updatePosition(double x, double y);
 	void updateColor(gl_color c);
 
-private:
-	double height;
-	double width;
+protected:
+	double xCoordinate;
+	double yCoordinate;
 	float color[4];
 };

@@ -14,11 +14,12 @@ BallShape::BallShape(double x, double y, double r, gl_color c)
 void BallShape::drawn()
 {
 	glBegin(GL_POLYGON);
-	float x, y;
+	glColor3f(color[0], color[1], color[2]);
+	double x, y;
 	for (int i = 0; i < 360; i++){
-		x = radius * sin(i / pi);
-		y = radius * cos(i / pi);
-		glVertex2f(x, y);
+		x = radius * sin(i / pi) + xCoordinate;
+		y = radius * cos(i / pi) + yCoordinate;
+		glVertex2d(x, y);
 	}
 	glEnd();
 }
