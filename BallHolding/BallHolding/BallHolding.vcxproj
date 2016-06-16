@@ -147,12 +147,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConstParam.h" />
+    <ClInclude Include="BallShape.h" />
+    <ClInclude Include="Shape.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BallHolding.cpp" />
+    <ClCompile Include="BallShape.cpp" />
     <ClCompile Include="ConstParam.cpp" />
+    <ClCompile Include="Shape.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

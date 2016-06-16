@@ -2,23 +2,24 @@
 //
 
 #include "stdafx.h"
+#include "BallShape.h"
+
 #include <GL/glut.h>
 
 #define WIDTH 1024
 #define HEIGHT 768
 
 bool full_screen_flag = false;
+BallShape ball = BallShape(0.0, 0.0, 2.0, ballColor);
 
+
+//コールバック関数
 void diplay(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	glBegin(GL_TRIANGLES);
-		glColor4f(barColor.red, barColor.green, barColor.blue, barColor.alpha);
-		glVertex2f(0.0, 0.0);
-		glVertex2f(25.46, -0.75);
-		glVertex2f(25.46, 0.75);
-	glEnd();
+	//ballShape ball = ballShape(0.0, 0.0, 3.0, ballColor);
+	ball.drawn();
 
 	glutSwapBuffers();
 }
@@ -33,9 +34,16 @@ void resize(int width, int height) {
 	glOrtho(-width / (20 * screenScaleWidth), width / (20 * screenScaleWidth), -height / (20 * screenScaleHeight), height / (20 * screenScaleHeight), -1.0, 1.0);
 }
 
+void timer(int value) {
+	printf("loop\n");
+	glutPostRedisplay();
+	glutTimerFunc(1, timer, 0);
+}
+
 void initGL(void) 
 {
 	glClearColor(backGroundColor.red, backGroundColor.green, backGroundColor.blue, backGroundColor.alpha);
+	printf("test\n");
 }
 
 //WinowsAPIを用いたフルスクリーン切り替え関数
@@ -90,6 +98,7 @@ int main(int argc, char *argv[])
 	//描画ルーチン
 	glutDisplayFunc(diplay);
 	glutReshapeFunc(resize);
+	glutTimerFunc(10, timer, 0);
 	//入出力ルーチン
 	initGL();
 	glutKeyboardFunc(keybd);
