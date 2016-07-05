@@ -5,6 +5,7 @@
 #include "BarShape.h"
 #include "BallShape.h"
 #include "CursorShape.h"
+#include "ExpParam.h"
 
 #include <GL/glut.h>
 
@@ -42,7 +43,6 @@ void resize(int width, int height) {
 }
 
 void timer(int value) {
-	printf("loop\n");
 	glutPostRedisplay();
 	glutTimerFunc(1, timer, 0);
 }
@@ -51,6 +51,7 @@ void initGL(void)
 {
 	glClearColor(backGroundColor.red, backGroundColor.green, backGroundColor.blue, backGroundColor.alpha);
 	printf("test\n");
+	ExpParam exp = ExpParam();
 }
 
 //WinowsAPIを用いたフルスクリーン切り替え関数

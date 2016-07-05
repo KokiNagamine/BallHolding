@@ -146,20 +146,25 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BallHoldingState.h" />
     <ClInclude Include="BarShape.h" />
     <ClInclude Include="ConstParam.h" />
     <ClInclude Include="BallShape.h" />
     <ClInclude Include="CursorShape.h" />
+    <ClInclude Include="ExpParam.h" />
+    <ClInclude Include="ExpState.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BallHolding.cpp" />
+    <ClCompile Include="BallHoldingState.cpp" />
     <ClCompile Include="BallShape.cpp" />
     <ClCompile Include="BarShape.cpp" />
     <ClCompile Include="ConstParam.cpp" />
     <ClCompile Include="CursorShape.cpp" />
+    <ClCompile Include="ExpParam.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
