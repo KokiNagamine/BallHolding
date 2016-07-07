@@ -30,6 +30,16 @@ ExpParam::ExpParam(char *s)
 	}
 }
 
+void ExpParam::loadParam(string param) 
+{
+	state->loadParam(param);
+}
+
+void ExpParam::loadParam(int trial, string param)
+{
+	state->loadParam(trial, param);
+}
+
 void ExpParam::setState(string theme)
 {
 	unordered_map<string, int> mp;

@@ -14,9 +14,11 @@
 
 bool full_screen_flag = false;
 
-BarShape test = BarShape(1.0, 2.0, barColor);
-BallShape ball = BallShape(0.0, 2.0, 3.0, ballColor);
-CursorShape cursor = CursorShape(0.0, 3.0, 1.5, 8.0, cursorColor);
+ExpParam expData = ExpParam();
+
+BarShape test = BarShape(1.0, 2.0, glPurple);
+BallShape ball = BallShape(0.0, 2.0, 3.0, glRed);
+CursorShape cursor = CursorShape(0.0, 3.0, 1.5, 8.0, glBlack);
 
 
 
@@ -49,9 +51,7 @@ void timer(int value) {
 
 void initGL(void) 
 {
-	glClearColor(backGroundColor.red, backGroundColor.green, backGroundColor.blue, backGroundColor.alpha);
-	printf("test\n");
-	ExpParam exp = ExpParam();
+	glClearColor(glGreen.red, glGreen.green, glGreen.blue, glGreen.alpha);
 }
 
 //WinowsAPIを用いたフルスクリーン切り替え関数
@@ -63,7 +63,7 @@ void fullScreen() {
 	hWnd = GetActiveWindow();
 
 	if (full_screen_flag) {
-		glClearColor(backGroundColor.red, backGroundColor.green, backGroundColor.blue, backGroundColor.alpha);
+		glClearColor(glGreen.red, glGreen.green, glGreen.blue, glGreen.alpha);
 		while (EnumDisplaySettings(NULL, nMode++, &devMode))
 		{
 			if (devMode.dmPelsWidth != WIDTH || devMode.dmPelsHeight != HEIGHT) continue;
@@ -73,7 +73,7 @@ void fullScreen() {
 		ChangeDisplaySettings(&devMode, CDS_TEST);
 		glutFullScreen();
 	} else {
-		glClearColor(backGroundColor.red, backGroundColor.green, backGroundColor.blue, backGroundColor.alpha);
+		glClearColor(glGreen.red, glGreen.green, glGreen.blue, glGreen.alpha);
 		ChangeDisplaySettings(NULL, 0);
 		glutPositionWindow(100, 100);
 		glutReshapeWindow(1120, 630);
@@ -88,6 +88,11 @@ void keybd(unsigned char key, int x, int y) {
 		printf("スクリーンモードを変更します。\n");
 		fullScreen();
 		break;
+	/*
+	case 'l' :
+		exp = ExpParam();
+		printf("実験条件の再読み込みを行いました。\n");
+		break;*/
 	default:
 		printf("未定義の入力です。\n f:スクリーンモード変更\n");
 		break;

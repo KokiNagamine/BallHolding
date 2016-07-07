@@ -1,20 +1,49 @@
 #include "stdafx.h"
 
 //色宣言{red, green, blue, alpha}
-gl_color backGroundColor = {
-	0.0f, 0.5f, 0.0f, 1.0f
+
+gl_color glBlue = {
+	0.2f, 0.0f, 1.0f, 1.0f
 };
 
-gl_color barColor = {
-	0.0f, 0.5f, 1.0f, 1.0f
+gl_color glRed = {
+	0.8f, 0.0f, 0.0f, 1.0f
 };
 
-gl_color cursorColor = {
+gl_color glGreen = {
+	0.0f, 0.4f, 0.0f, 1.0f
+};
+
+gl_color glYellow = {
+	1.0f, 1.0f, 0.0f, 1.0f
+};
+
+gl_color glOrange = {
+	1.0f, 0.2f, 0.0f, 1.0f
+};
+
+gl_color glPurple = {
+	0.6f, 0.0f, 1.0f, 1.0f
+};
+
+gl_color glGray = {
+	0.6f, 0.6f, 0.6f, 1.0f
+};
+
+gl_color glBrown = {
+	0.4f, 0.2f, 0.0f, 1.0f
+};
+
+gl_color glAzure = {
+	0.2f, 0.8f, 1.0f, 1.0f
+};
+
+gl_color glBlack = {
 	0.0f, 0.0f, 0.0f, 1.0f
 };
 
-gl_color ballColor = {
-	0.7f, 0.0f, 0.0f, 1.0f
+gl_color glWhite = {
+	1.0f, 1.0f, 1.0f, 1.0f
 };
 
 //スクリーンと実尺の比率、ピクセルを実寸で割った値

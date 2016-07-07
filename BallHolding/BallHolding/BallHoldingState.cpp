@@ -54,7 +54,7 @@ void BallHoldingState::setParam(std::ifstream& ifs)
 	}
 }
 
-//引数はTrialNumとsetParamでmpに受け付けた値
+//引数はTrialNumとsetParamでmpに受け付けた値, TrialNum, BallRadius, BallWeight
 double BallHoldingState::loadParam(std::string param)
 {
 	double value = 0.0;
@@ -69,11 +69,12 @@ double BallHoldingState::loadParam(std::string param)
 	return value;
 }
 
-double BallHoldingState::loadParam(int trial, std::string param)
+//onForceTimingFrag, EMGFrag, ResultFrag, ScreenFrag
+double BallHoldingState::loadParam(int trial, std::string param)	//trialは1オリジン
 {
 	double value = 0.0;
 
-	value = params[trial][static_cast<int>(mp[param])];
+	value = params[trial - 1][static_cast<int>(mp[param])];
 
 	return value;
 }

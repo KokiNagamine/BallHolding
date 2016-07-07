@@ -12,6 +12,9 @@ public:
 	ExpParam();
 	ExpParam(char *s);
 
+	void loadParam(std::string param);
+	void loadParam(int trial, std::string param);
+
 private:
 	std::ifstream ifs;
 	ExpState *state;
