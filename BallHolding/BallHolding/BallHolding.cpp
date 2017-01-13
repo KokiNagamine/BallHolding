@@ -6,6 +6,7 @@
 #include "BallShape.h"
 #include "CursorShape.h"
 #include "ExpParam.h"
+#include "ExpWorld.h"
 
 #include <GL/glut.h>
 
@@ -15,6 +16,7 @@
 bool full_screen_flag = false;
 
 ExpParam expData = ExpParam();
+//ExpWorld expWorld = ExpWorld(expData);
 
 BarShape test = BarShape(1.0, 2.0, glPurple);
 BallShape ball = BallShape(0.0, 2.0, 3.0, glRed);
@@ -52,6 +54,7 @@ void timer(int value) {
 void initGL(void) 
 {
 	glClearColor(glGreen.red, glGreen.green, glGreen.blue, glGreen.alpha);
+	printf("init!!!\n");
 }
 
 //WinowsAPIを用いたフルスクリーン切り替え関数
@@ -101,6 +104,7 @@ void keybd(unsigned char key, int x, int y) {
 
 int main(int argc, char *argv[])
 {
+
 	//初期化
 	glutInit(&argc, argv);
 	//ウィンドウ生成
@@ -108,12 +112,12 @@ int main(int argc, char *argv[])
 	glutInitWindowPosition(100, 100);
 	glutInitWindowSize(1120 ,630);
 	glutCreateWindow("BallHoldingProgram");
+	initGL();
 	//描画ルーチン
 	glutDisplayFunc(diplay);
 	glutReshapeFunc(resize);
 	glutTimerFunc(10, timer, 0);
 	//入出力ルーチン
-	initGL();
 	glutKeyboardFunc(keybd);
 	//ループ
 	glutMainLoop();

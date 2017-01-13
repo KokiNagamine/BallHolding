@@ -30,14 +30,14 @@ ExpParam::ExpParam(char *s)
 	}
 }
 
-void ExpParam::loadParam(string param) 
+double ExpParam::loadParam(string param) 
 {
-	state->loadParam(param);
+	return state->loadParam(param);
 }
 
-void ExpParam::loadParam(int trial, string param)
+double ExpParam::loadParam(int trial, string param)
 {
-	state->loadParam(trial, param);
+	return state->loadParam(trial, param);
 }
 
 void ExpParam::setState(string theme)
